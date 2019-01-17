@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Aesthetic Atoms</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css"
+          rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="atom.js" type="text/javascript"></script>
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <div style="width: 50%; float:left; padding-left: 50px; padding-right:5px; padding-top: 20px">
+        <h1 id="title">Aesthetic Atoms</h1>
+        <p class="lead">This is a demonstration of an application of my p5.js component. Use the controls below to
+            change
+            the appearance of the sketch on the right. Use the mouse to drag around the atom and scroll to zoom in and
+            out.</p>
+        <p>See the documentation (README.md) for details on what each attribute does.</p>
+
+        <form id="input_form">
+            <label for="nucleusRadius">Nucleus Radius</label>
+            <input id="nucleusRadius" max="200" min="1" type="number" value="20"/>
+            <label for="electronCount">Electron Count</label>
+            <input id="electronCount" max="10" min="1" type="number" value="3"/></br>
+
+            <label for="nucleusVibrate">Nucleus Vibration</label>
+            <input id="nucleusVibrate" type="checkbox"/>
+            <label for="electronVibrate">Electron Vibration</label>
+            <input id="electronVibrate" type="checkbox"/></br>
+
+            <label for="electronSpeed">Electron Speed</label>
+            <input id="electronSpeed" max="5" min="0" step="0.01" type="range" value="0.75"/>
+            <label for="nucleusColor">Nucleus Color</label>
+            <input id="nucleusColor" type="color" value="#031cc1"/>
+            <label for="electronColor">Electron Color</label>
+            <input id="electronColor" type="color" value="#c10303"/></br>
+
+            <label for="nucleusColorCycle">Nucleus Color Cycle</label>
+            <input id="nucleusColorCycle" type="checkbox"/>
+
+            <label for="electronColorCycle">Electron Color Cycle</label>
+            <input id="electronColorCycle" type="checkbox"/></br>
+
+            <label for="spinX">Spin X</label>
+            <input id="spinX" type="checkbox"/>
+            <label for="spinY">Spin Y</label>
+            <input id="spinY" type="checkbox"/>
+            <label for="spinZ">Spin Z</label>
+            <input id="spinZ" type="checkbox"/></br>
+
+            <label for="nucleusNoise">Nucleus Noise</label>
+            <input id="nucleusNoise" type="checkbox"/>
+            <label for="smoothing">Smoothing</label>
+            <input id="smoothing" type="checkbox"/>
+
+            <label for="cube">Draw to Cube</label>
+            <input id="cube" type="checkbox"/>
+        </form>
+        <p>Notes:</p>
+        <ul>
+            <li>Noise decreases performance slightly.</li>
+            <li>Smoothing increases visual refinement at the cost of a decreased framerate.</li>
+            <li>Draw to Cube: Drawing a 3D sketch to a 3D object results in unexpected graphical glitches and/or
+                behaviour.
+                This functionality is included purely as a proof of concept.
+            </li>
+        </ul>
+    </div>
+
+    <div id="sketch-holder" style="width: 50%; float:right; padding-left: 5px; padding-right: 50px; padding-top: 20px">
+    </div>
+</div>
+</body>
+
+</html>
